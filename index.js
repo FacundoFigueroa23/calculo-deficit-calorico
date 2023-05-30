@@ -11,6 +11,6 @@ document.querySelector("form").addEventListener("submit", e => {
     const data = Object.fromEntries(
         new FormData(e.target)
     )
-    let deficit = getDeficit(data.sexo, Number(data.peso), Number(data.altura), Number(data.edad), Number(data.actividad))
+    let deficit = getDeficit(data.sexo, Number(data.peso), Number(data.altura), Number(data.edad), Number(data.actividad)).toFixed(0)
     alert(`Tu déficit calórico es de ${deficit - 500} a ${deficit - 300} calorías diarias.`)
 })
